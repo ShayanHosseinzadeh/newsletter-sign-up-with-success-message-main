@@ -40,8 +40,8 @@ Success page in mobile
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/designed-front-with-css-and-bootstrap-5U5fga1hE3)
-- Live Site URL: [Add live site URL here](https://newsletter-sign-up-with-success-message-main-amber.vercel.app/)
+- Solution URL: [Click to view](https://www.frontendmentor.io/solutions/designed-front-with-css-and-bootstrap-5U5fga1hE3)
+- Live Site URL: [Click to view](https://newsletter-sign-up-with-success-message-main-amber.vercel.app/)
 
 ## My process
 
