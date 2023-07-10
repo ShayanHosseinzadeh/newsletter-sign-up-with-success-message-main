@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Signup in newsletter</title>
+  <link rel="shortcut icon" href="/assets/images/favicon-32x32.png" type="image/x-icon">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="content bg-light">
+    <div class="row">
+      <div class="col-xl-6 mt-4 py-5 ">
+        <div class="header">
+          <h1 class="text-center">Stay updated!</h1>
+          <p class="pt-3 pl-5">Join 60,000+ product managers recieving monthly updates on: </p>
+        </div>
+        <div class="main pl-5 mt-4">
+          <ul>
+            <li>Product discovery and building what matters</li>
+            <li>Measuring to ensure updates are a sucess</li>
+            <li>and much more!</li>
+          </ul>
+        </div>
+        <div class="footer px-5 mt-4">
+          <form action="/success-page-desktop.html" id="emailForm">
+            <div class="form-group">
+              <b><label for="email">Email Address:</label> <br></b>
+              <input type="email" name="email" id="email" placeholder="youremail@example.com">
+              <p id="emailError" style="color:red"></p>
+            </div>
+            <button class="button" type="submit">Subscribe to monthly newsletter</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-xl-6 text-center">
+        <img class="my-3 banner" src="/assets/images/illustration-sign-up-desktop.svg" alt="">
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Optional JavaScript -->
+  <script>
+// Form validation
+var form = document.getElementById('emailForm');
+form.addEventListener('submit', function(event) {
+  var emailInput = document.getElementById('email');
+  var emailError = document.getElementById('emailError');
+  var email = emailInput.value.trim();
+
+  // Reset previous error message
+  emailError.textContent = '';
+
+  // Check if the field is empty
+  if (email === '') {
+    emailError.textContent = 'Email field cannot be empty.';
+    emailInput.style.border="3px solid red"
+    event.preventDefault(); // Prevent form submission
+    return;
+  }
+
+  // Check if the email is valid
+  var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/;
+  if (!email.match(emailRegex)) {
+    emailError.textContent = 'Please enter a valid email address.';
+    event.preventDefault(); // Prevent form submission
+    return;
+  }
+
+  // Store the email in local storage
+  localStorage.setItem('email', email);
+});
+
+  </script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
