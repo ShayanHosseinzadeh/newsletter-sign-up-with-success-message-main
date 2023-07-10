@@ -19,7 +19,7 @@ This is a solution to the [Newsletter sign-up form with success message challeng
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
-
+t
 ### The challenge
 
 Users should be able to:
